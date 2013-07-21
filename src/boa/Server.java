@@ -23,14 +23,15 @@ public class Server {
 	public static byte worldId, location;
 	public static boolean members;
 	public static String activity;
-	
 	public static boolean isOnline = false;
+	public static boolean isDebugEnabled;
 	
-	public Server(byte worldId, boolean members, byte location, String activity) throws Exception {
+	public Server(byte worldId, boolean members, byte location, String activity, boolean debug) throws Exception {
 		this.worldId = worldId;
 		this.members = members;
 		this.location = location;
 		this.activity = activity;
+		isDebugEnabled = debug;
 		init();
 	}
 	

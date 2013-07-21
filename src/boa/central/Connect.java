@@ -5,10 +5,11 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
 import java.nio.ByteBuffer;
-import java.util.logging.Logger;
 
 import boa.Server;
 import boa.game.communication.clan.ClanSettings;
+import boa.log.Logger;
+import boa.log.Logger.Type;
 import boa.util.Utils;
 
 
@@ -18,8 +19,6 @@ import model.Player;
 import model.World;
 
 public class Connect implements Runnable {
-
-	private static final Logger logger = Logger.getLogger(Connect.class.getName());
 
 	private static final String LOGIN_SERVER_IP = "127.0.0.1";
 	private static final int LOGIN_SERVER_PORT = 43595;
@@ -40,9 +39,11 @@ public class Connect implements Runnable {
 	
 	@Override
 	public void run() {
-		logger.info("Connecting to login server...");
+		Logger.log(Type.INFO, "Connecting to login server...", this.getClass());
+		//logger.info("Connecting to login server...");
 		while (connect());
-		logger.info("Connected to login server.");
+		Logger.log(Type.INFO, "Connected to login server.", this.getClass());
+		//logger.info("Connected to login server.");
 		while (true) {
 			try {
 				//if (!isAuthorized) {
@@ -58,16 +59,18 @@ public class Connect implements Runnable {
 						continue;
 					} else {
 						int opcode = in.read();
-						System.out.println("opcode = "+opcode);
+						Logger.log(Type.DEBUG, "opcode = " + opcode, this.getClass());
+						//System.out.println("opcode = "+opcode);
 						if (opcode == 0) {
 							switch(in.read()) {
 							case 0:
-								logger.info("Incorrect password. System shutting down.");
+								Logger.log(Type.SEVERE, "Incorrect password. System shutting down.", this.getClass());
 								System.exit(0);
 								break;
 							case 1:
 								isAuthorized = true;
-								logger.info("Central Server connection authorized!");
+								Logger.log(Type.INFO, "Central Server connection authorized!", this.getClass());
+								//logger.info("Central Server connection authorized!");
 								Server.isOnline = true;
 								break;
 							case 2:
@@ -76,7 +79,7 @@ public class Connect implements Runnable {
 							}
 							continue;
 						} else if (opcode == 1) {//Authenticate login
-							System.out.println("Login authenticated!");
+							//Logger.log(Type.DEBUG, "opcode = " + opcode, this.getClass());
 							Player player = World.getPlayerFromName(Utils.getRS2String(in));
 							int returncode = in.read();
 							player.addTemporary("RETURNCODE", returncode);
@@ -92,7 +95,7 @@ public class Connect implements Runnable {
 						} else if (opcode == 4) {//Friend logged-in status changes.
 							ActionSender.sendFriend(World.getPlayerFromName(Utils.longToPlayerName(in.readLong())), in.readLong(), in.read(), in.readByte());
 						} else if (opcode == 5) {//Friend Server
-							System.out.println("lolwuts?");
+							//System.out.println("lolwuts?");
 							ActionSender.sendFriendServerStatus(World.getPlayerFromName(Utils.longToPlayerName(in.readLong())), in.read());
 						} else if (opcode == 6) {//receive private message
 							Player receiver = World.getPlayerFromName(Utils.longToPlayerName(in.readLong()));
@@ -106,7 +109,7 @@ public class Connect implements Runnable {
 							Player receiver = World.getPlayerFromName(Utils.longToPlayerName(in.readLong()));
 							ActionSender.sendMessage(receiver, Utils.getRS2String(in));
 						} else if (opcode == 9) {//update clan settings interface
-							System.out.println("9");
+							//System.out.println("9");
 							ClanSettings.updateSettingsInterface(World.getPlayerFromName(Utils.longToPlayerName(in.readLong())), in.readByte() == 1 ? true : false, in.readByte(), in.readByte(), in.readByte(), in.readByte(), Utils.getRS2String(in));
 						} else if (opcode == 10) {//send sent private message
 							Player sender = World.getPlayerFromName(Utils.longToPlayerName(in.readLong()));
@@ -115,7 +118,7 @@ public class Connect implements Runnable {
 							in.read(data);
 							ActionSender.sendSentPrivateMessage(sender, to, data);
 						} else if (opcode == 11) {//update clan
-							System.out.println("opcode 11");
+							//System.out.println("opcode 11");
 							Player player = World.getPlayerFromName(Utils.longToPlayerName(in.readLong()));
 							long clanOwner = in.readLong();
 							long clanPrefix = in.readLong();
@@ -131,12 +134,12 @@ public class Connect implements Runnable {
 							ActionSender.sendClanChat(player, clanPrefix, kick, clanOwner, usernames, ranksAndWorlds);
 							player.setIsInClanChat(true);
 						} else if (opcode == 12) {
-							System.out.println("12");
+							//System.out.println("12");
 							Player player = World.getPlayerFromName(Utils.longToPlayerName(in.readLong()));
 							long sender = in.readLong();
 							long prefix = in.readLong();
 							String message = Utils.getRS2String(in);
-							System.out.println("message = "+message);
+							//System.out.println("message = "+message);
 							ActionSender.sendClanMessage(player, sender, prefix, message);
 						}
 					//} else {
@@ -146,9 +149,11 @@ public class Connect implements Runnable {
 				//}
 				Thread.sleep(250);
 			} catch (Exception e) {
-				logger.info("Lost connection with login sever trying to reconnect...");
+				Logger.log(Type.INFO, "Lost connection with login server. Trying to reconnect...", this.getClass());
+				//logger.info("Lost connection with login sever trying to reconnect...");
 				while (reconnect());
-				logger.info("Connected to login server.");
+				Logger.log(Type.INFO, "Connected to login server.", this.getClass());
+				//logger.info("Connected to login server.");
 			}
 		}
 	}
@@ -285,7 +290,8 @@ public class Connect implements Runnable {
 			} catch (Exception ex) {
 				ex.printStackTrace();
 			}
-			logger.info("Connecting failed, retrying...");
+			Logger.log(Type.INFO, "Connection failed. Retrying...", Connect.class.getClass());
+			//logger.info("Connecting failed, retrying...");
 			return true;
 		}
 	}
@@ -305,9 +311,11 @@ public class Connect implements Runnable {
 				send(ByteBuffer.wrap(data));
 			}
 		} catch (Exception e) {
-			logger.info("Lost connection with login sever trying to reconnect...");
+			Logger.log(Type.INFO, "Lost connection with login server. Trying to reconnect...", Connect.class.getClass());
+			//logger.info("Lost connection with login sever trying to reconnect...");
 			while (reconnect());
-			logger.info("Connected to login server.");
+			Logger.log(Type.INFO, "Connected to login server.", Connect.class.getClass());
+			//logger.info("Connected to login server.");
 			send(buffer);
 		}
 	}
@@ -334,7 +342,8 @@ public class Connect implements Runnable {
 			} catch (Exception ex) {
 				ex.printStackTrace();
 			}
-			logger.info("Connecting failed, retrying...");
+			Logger.log(Type.INFO, "Connection failed. Retrying...", Connect.class.getClass());
+			//logger.info("Connecting failed, retrying...");
 			return true;
 		}
 	}
