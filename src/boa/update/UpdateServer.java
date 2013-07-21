@@ -1,4 +1,4 @@
-package updateServer;
+package boa.update;
 
 import java.util.logging.Logger;
 
@@ -6,8 +6,9 @@ import java.util.zip.CRC32;
 
 import java.nio.ByteBuffer;
 
-import updateServer.Cache;
-import updateServer.FileDecompressor;
+import boa.update.Cache;
+import boa.update.FileDecompressor;
+
 
 public class UpdateServer {
 

@@ -1,4 +1,4 @@
-package updateServer;
+package boa.update;
 
 import java.io.Closeable;
 import java.io.IOException;
@@ -6,7 +6,8 @@ import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel.MapMode;
 
-import updateServer.FileInformationTable.Format;
+import boa.update.FileInformationTable.Format;
+
 
 public class CacheIndex implements Closeable {
 	

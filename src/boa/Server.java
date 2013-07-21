@@ -5,12 +5,12 @@ import java.util.concurrent.Executors;
 
 import boa.central.Connect;
 import boa.game.Content;
+import boa.update.Cache;
+import boa.update.UpdateServer;
 
 
 import packet.PacketManager;
 
-import updateServer.Cache;
-import updateServer.UpdateServer;
 
 import model.World;
 import net.ConnectionManager;

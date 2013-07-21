@@ -1,4 +1,4 @@
-package updateServer;
+package boa.update;
 
 public enum Compression {
 	

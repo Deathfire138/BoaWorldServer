@@ -1,4 +1,4 @@
-package updateServer.util;
+package boa.update.util;
 
 import java.io.IOException;
 import java.io.OutputStream;

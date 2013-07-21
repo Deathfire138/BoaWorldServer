@@ -1,4 +1,4 @@
-package updateServer;
+package boa.update;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;

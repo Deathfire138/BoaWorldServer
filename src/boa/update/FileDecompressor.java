@@ -1,9 +1,10 @@
-package updateServer;
+package boa.update;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
 
-import updateServer.util.CacheUtil;
+import boa.update.util.CacheUtil;
+
 
 public class FileDecompressor {
 

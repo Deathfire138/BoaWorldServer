@@ -11,7 +11,8 @@ import org.jboss.netty.channel.ChannelHandlerContext;
 
 import org.jboss.netty.handler.codec.frame.FrameDecoder;
 
-import updateServer.UpdateServer;
+import boa.update.UpdateServer;
+
 
 public class RS2UpdateDecoder extends FrameDecoder {
 

@@ -1,4 +1,4 @@
-package updateServer.util;
+package boa.update.util;
 
 public interface BZip2Constants {
 
