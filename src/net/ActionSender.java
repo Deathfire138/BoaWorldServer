@@ -1,9 +1,9 @@
 package net;
 
-import centralServerConnection.Connect;
+import boa.central.Connect;
+import boa.game.maps.MapData;
+import boa.util.Utils;
 import net.PacketBuilder.Size;
-import maps.MapData;
-import miscellaneous.Utils;
 import model.Item;
 import model.Player;
 

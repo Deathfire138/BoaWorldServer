@@ -1,7 +1,7 @@
 package packet.handlers;
 
+import boa.util.Utils;
 import event.InputEvent;
-import miscellaneous.Utils;
 import model.Player;
 import packet.Packet;
 import packet.PacketHandler;

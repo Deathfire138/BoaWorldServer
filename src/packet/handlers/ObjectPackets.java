@@ -1,6 +1,6 @@
 package packet.handlers;
 
-import content.Content;
+import boa.game.Content;
 import model.Player;
 import packet.Packet;
 import packet.PacketHandler;

@@ -1,7 +1,7 @@
 package packet.handlers;
 
-import centralServerConnection.Connect;
-import miscellaneous.Utils;
+import boa.central.Connect;
+import boa.util.Utils;
 import model.ChatMessage;
 import model.Player;
 import packet.Packet;

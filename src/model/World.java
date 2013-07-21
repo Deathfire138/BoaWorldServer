@@ -1,14 +1,16 @@
 package model;
 
+
 import java.util.ArrayList;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-import content.handlers.Handler;
-import content.handlers.MinigameHandler;
-import content.handlers.QuestHandler;
-import content.handlers.SkillHandler;
+import boa.game.handlers.Handler;
+import boa.game.handlers.MinigameHandler;
+import boa.game.handlers.QuestHandler;
+import boa.game.handlers.SkillHandler;
+
 
 import model.region.RegionManager;
 

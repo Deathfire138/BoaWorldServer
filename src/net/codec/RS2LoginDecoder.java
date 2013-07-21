@@ -3,7 +3,6 @@ package net.codec;
 import java.nio.ByteBuffer;
 import java.util.logging.Logger;
 
-import miscellaneous.Utils;
 import net.Login;
 
 import org.jboss.netty.buffer.ChannelBuffer;
@@ -12,6 +11,8 @@ import org.jboss.netty.channel.Channel;
 import org.jboss.netty.channel.ChannelHandlerContext;
 
 import org.jboss.netty.handler.codec.frame.FrameDecoder;
+
+import boa.util.Utils;
 
 public class RS2LoginDecoder extends FrameDecoder {
 

@@ -8,7 +8,8 @@ import net.codec.RS2Decoder;
 
 import org.jboss.netty.channel.Channel;
 
-import centralServerConnection.Connect;
+import boa.central.Connect;
+
 
 public class Login {
 

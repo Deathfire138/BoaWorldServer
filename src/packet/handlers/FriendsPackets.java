@@ -1,8 +1,8 @@
 package packet.handlers;
 
+import boa.central.Connect;
+import boa.util.Utils;
 import net.ActionSender;
-import centralServerConnection.Connect;
-import miscellaneous.Utils;
 import model.Player;
 import packet.Packet;
 import packet.PacketHandler;

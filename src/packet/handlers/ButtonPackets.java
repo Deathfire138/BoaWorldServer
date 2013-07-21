@@ -1,7 +1,7 @@
 package packet.handlers;
 
-import content.Content;
-import content.handlers.interfaces.ButtonHandler;
+import boa.game.Content;
+import boa.game.handlers.interfaces.ButtonHandler;
 import model.Player;
 import packet.Packet;
 import packet.PacketHandler;
