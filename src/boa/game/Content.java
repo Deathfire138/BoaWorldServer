@@ -5,7 +5,7 @@ import java.io.File;
 import java.util.LinkedList;
 import java.util.logging.Logger;
 
-import boa.game.handlers.Handler;
+import boa.game.handlers.StandardHandler;
 import boa.game.handlers.MinigameHandler;
 import boa.game.handlers.QuestHandler;
 import boa.game.handlers.SkillHandler;
@@ -68,7 +68,7 @@ public class Content {
 		if (!QuestHandler.button(player, opcode, interfaceId, button, button2)) {
 			if (!MinigameHandler.button(player, opcode, interfaceId, button, button2)) {
 				if (!SkillHandler.button(player, opcode, interfaceId, button, button2)) {
-					return Handler.button(player, opcode, interfaceId, button, button2);
+					return StandardHandler.button(player, opcode, interfaceId, button, button2);
 				}
 			}
 		}

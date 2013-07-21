@@ -1,13 +1,13 @@
 package boa.game.communication.clan;
 
 import boa.central.Connect;
-import boa.game.handlers.Handler;
+import boa.game.handlers.StandardHandler;
 import boa.game.handlers.interfaces.ButtonHandler;
 import net.ActionSender;
 import model.Player;
 import event.InputEvent;
 
-public class ClanSettings extends Handler implements ButtonHandler {
+public class ClanSettings extends StandardHandler implements ButtonHandler {
 
 	@Override
 	public boolean handleButton(final Player player, int opcode, int interfaceId,	int buttonId, int buttonId2) {

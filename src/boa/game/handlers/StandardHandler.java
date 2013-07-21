@@ -15,7 +15,7 @@ import model.Location;
 import model.Player;
 
 
-public abstract class Handler {
+public abstract class StandardHandler {
 	
 	private static final List<LoginHandler> loginHandlers = new LinkedList<LoginHandler>();
 	
@@ -31,7 +31,7 @@ public abstract class Handler {
 	
 	private static final List<EquipHandler> equipmentHandlerHandlers = new LinkedList<EquipHandler>();
 
-	public Handler() {
+	public StandardHandler() {
 		Object object = getObject();
 		if (object instanceof ObjectOptionOneHandler) {
 			objectOptionOneHandlers.add((ObjectOptionOneHandler) object);
