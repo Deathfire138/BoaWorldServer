@@ -1,0 +1,21 @@
+/********NOTES********/
+
+2 ^ value is an easier-to-read way of writing this when in code form, if it applies. (usually does)
+
+/*********************/
+
+ID: unknown
+Summary: Changes the catapult for catapult construction
+Values:
+	0 - Broken catapult
+	536870912 - Fixed catapult
+	1073741824 - Fixed, seasoned catapult
+	
+
+-----------------------------------
+
+ID: unknown
+Summary: Controls Hot Air Balloon placement. Turns rocks into landed hot air balloons.
+Values:
+	8192 - Tree Gnome Stronghold
+	

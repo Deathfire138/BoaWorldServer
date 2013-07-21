@@ -1,0 +1,29 @@
+/********FORMAT********/
+
+Summary of first problem
+
+	Notes taken
+
+
+
+Summary of second problem
+
+	Notes taken
+
+/**********************/
+
+Cannot noclip and report abuse as chatbox player name option not available even though crown is gold
+
+	Check login block (return code and shit, both server and client-sided).
+
+	Refactor while you're there.
+
+
+
+XTEA maps are not showing up, should fix that shit.
+
+
+
+Regions, after walking a long distance or teleporting (might just be teleporting), start to fuck up massively. Sort of hilarious, but a big problem nonetheless
+
+	Put prints in the region and location classes. Compare with eachother, make sure they're synched.

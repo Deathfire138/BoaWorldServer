@@ -1,0 +1,3 @@
+11:55 AM 1/1/2013 - XTEA maps not loading. Cause: sending Int2 instead of Int1 for keys.
+
+11:56 AM 1/1/2013 - client-sided admin/moderator controls unavailable to admins and moderators. Cause: Was mistaken about sending rights as 2, was actually sending 0. No bug was present.

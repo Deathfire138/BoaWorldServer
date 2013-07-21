@@ -1,0 +1,195 @@
+10572	Sea Slug/Slug Menace/Kenniths Concerns (can't remember which one) quest, the rooms inbetween the rooms with the vents, where the fisherman guy catches up to you and you meet random NPCs from the storyline. Uses construct map region packet (the same one for Construction). There are 4 rooms in one coordinate area, just at different heights.
+10833	Dorgesh Kaan tunnels (after you've entered Dorgesh Kaan, not on the way there from the kitchen basement.)
+12353	Doesn't appear to be anything here. o.o
+12377	Bounty Hunter crater and bank area, but it is separate from the rest of the world (I would imagine you would use the sendConstructMap packet). Possibly used for the Bounty Hunter tutorial, also might be how they had multiple (low, medium, high) level craters, construct the same map 3 times over set areas.
+13370	Looks to be the map data on the east side of the Clan Wars area. Unfortunately, it looks like the Clan Wars arena map data is not available. :( (It would have been region 13114)
+14390	Mort Myre swamp between Canifis and Port Phasmatys (from the middle of between them up until Port Phasmatys. Missing Port Phasmatys XTEA.)
+15404	Water next to Barrelchest boss location, no real objects there, pretty much useless.
+15148	MISSING : Barrelchest boss location
+8497	Near the Catapult Construction area. Surrounding forest.
+8510	Appears to be just water.
+8753	Place from Catapult Construction (elf). Catapult responds to configs. Notes on this in other txt file.
+8762	Appears to be just water.
+8764	Appears to be just water.
+9019	Appears to be just water. Ship nearby with missing map data.
+9262	Appears to be just water.
+9522	Part of path that is alternative to Underground Pass
+9523	Part of path that is alternative to Underground Pass
+9524	MISSING : Start of path that is alternative to Underground Pass. Includes gates. Is necessary.
+9536	Appears to be just water.
+9300	Tree Gnome Stronghold. Separate from rest of world, use Construct Map packet.
+9556	Games Room (Gnomecopters map). Use Construct Map packet? o.o
+9044	MISSING : Pest control (Use Construct Map packet)
+10043	Supplementary map of small island (By Miscellenia?)
+10071	Dorgesh Kaan subway. Only loading platform, the part where dwarves are working (Region 10070) is MISSING.
+10280	Appears to be just water.
+10907	XTEA keys are present and non-zero, but objects don't appear to load on the small amount of 'ground' that exists in this area.
+11083	Mind Altar
+11339	Air Altar
+11579	Unwalkable wasteland behind Zamorak altar in wilderness. Completely supplementary.
+11602	GODWARS! :D (Saradomin Area)
+11603	GODWARS! :D (Zamorak Area)
+11346	GODWARS! :D (Armadyl Area)
+11347	GODWARS! :D (Bandos Area)
+11817	Appears to be just water.
+11818	Appears to be just water.
+11562	MISSING : Crash Island.
+12080	Small bit of the Tutorial Island maps, just the bit that is after the cook's house.
+12604	Just a bit of the Wilderness
+13354	Water below either Menaphos or Sophanem. Neither of these areas are actual map, use Construct Map region packet.
+13610	Water below either Menaphos or Sophanem. Neither of these areas are actual map, use Construct Map region packet.
+13630	Appears to be just water.
+14904	Appears to be just water.
+15408	Appears to be just water.
+6487	Fist of Guthix waiting/training area.
+6488	Fist of Guthix arena (SW)
+6489	Fist of Guthix arena (NW)
+6744	Fist of Guthix arena (SE)
+6745	MISSING : Fist of Guthix arena (NE)
+7001	Fist of Guthix fake arena (tutorial? o.O if it had one, ask Brian)
+6991	Dream Mentor dream area (WOOT!)
+7759	Player Owned House object store. 7759 has a lot, and we have it, but 7503 has a lot as well and it's MISSING. I'm not sure how I feel about substituting, since 7759 looks like slightly newer objects. o.o
+7760	Elemental Workshop II maps. Use Construct Map region packet. Different floors on different heights.
+8014	Full of Mort Myre random chunks. For cutscenes? Use Construct Map region packet.
+8241	Appears to be just water.
+8267	I'm really not quite sure what this is, looks similar in style to the Dream mentor stuff... very strange. Accessible by fairy ring.
+8506	Appears to be just water.
+8787	Underneath Pikkupstix's house, Summoning obelisk.
+9008	Part of the elven place, by the sulphur
+9011 	Tirrannwn
+9021	Appears to be just water.
+9027	I'm not really sure what this is. There are no objects and it's just a lot of landscape tiles.
+9269	Part of the alternative path to the Underground Pass
+9275	Appears to cause the client to not load. Not quite crash, but as though the buffer... dies or something? I don't know but it does not load. Do not attempt to go there. I bet it's the elf place. >.>
+9527	Top part of the Tree Gnome Stronghold
+9539	Empty
+10027	Water underneath As A First Resort area
+10048	Appears to be just water.
+10303	Appears to be just water.
+10314	Freaky Forester random event
+10400	I think this is the Dagonnaths cavern. o.o
+10554	Rock Crabs area
+10840	Bounty Hunter crater (away from real world, might be same area as other map in here before. I'm not going to waste time checking.)
+11066	Sled area
+11068	Sled area
+11070	Appears to be just water.
+11096	More Bounty Hunter
+11354	More Bounty Hunter
+11864	More Bounty Hunter
+12105	Agility Pyramid. Away from actual world. Construct Map packet.
+12122	More Bounty Hunter
+12335	Tutorial Island. (South bit of the island)
+12344	Bit of the Wilderness
+12348	Bit of the Wilderness
+12376	More Bounty Hunter
+12599	Bit of the Wilderness above the Grand Exchange
+12610	Gublinch? area. underground
+12855	Bit of the Wilderness above the Grand Exchange
+13203	Underground tunnels, lots of gates, some blood, minecarts, strange rocks.
+13367	Bit of the Wilderness above the sawmill, but off to the east a bit. Pretty much useless
+11629	Appears to be just water.
+13867	Appears to be just water.
+13868	Appears to be just water.
+13880	Just water above Fenkenstrain's castle (mapdata missing for castle)
+13972	Kalphite Queen lair
+14134	A bit of the Mort Myre Swamp. Includes Werewolf agility course entrance.
+14648	Appears to be just water.
+14903	Appears to be just water.
+15158	Appears to be just water.
+15160	Appears to be just water.
+15415	Appears to be just water.
+15416	Appears to be just water.
+6993	Giant Mole lair
+7247	Pretty sure it's the Dream Mentor fight, where you fight yourself
+7248	More Dream Mentor shit
+8254	Appears to be just water.
+8499	Appears to be just water.
+8507	Appears to be just water.
+8761	Appears to be just water.
+8769	That strange place with no objects, just flat landscape tiles...
+9012	Tirannwn
+9017	Appears to be just water.
+9020	Appears to be just water.
+9026	More of that strange place with no objects, just flat landscape tiles.
+9294	Chunks of Mort Myre, probably used for cutscenes, use Construct Map region packet.
+9528	Not sure what it is, it causes my client to load 50% and stop.
+9533	Appears to be just water.
+9550	More chunks of Mort Myre, probably used for cutscenes, use Construct Map region packet.
+9792	Appears to be just water.
+9794	For quest, I think it's related to goblins. Say-name grave. It's flooded, there's fire on the graves.
+9809	Causes client to load to 50% and stop.
+10065	Causes client to load to 50% and stop.
+10142	Something to do with the Dagonnath caverns.
+10144	Something to do with the Dagonnath caverns.
+10283	Appears to be just water.
+10324	More sled area
+10541	Water off the eastern coast of Oo'glog
+10560	Appears to be just water.
+10578	Empty
+10792	Appears to be just water.
+10815	Appears to be just water.
+10823	Small room, very dark. This is before you flip some switch and the room becomes very light (by teleporting you to another room). It's down stairs of something.
+11064	Golden tree, entrance to Keldagrim, south of Rellekka
+11069	Appears to be just water.
+11071	Appears to be just water.
+11097	More Bounty Hunter
+11326	Appears to be just water.
+11601	Dark, underwater, like the Twilight Zone. A dead body.
+11833	Abandoned place in Wilderness.
+12120	More Bounty Hunter
+12121	More Bounty Hunter
+12592	Wizard's house on Tutorial Island
+12601	More Bounty Hunter
+12602	More Bounty Hunter
+12857	Bit of the Wilderness
+12861	Bit of the Wilderness
+12866	Appears empty
+12955	Appears empty
+13368	Bit of the Wilderness
+13866	Appears to be just water.
+14128	Appears to be just water.
+14136	Appears to be just water.
+7502	Mr. Mordaut's room
+8240	Appears to be just water.
+8752	sulphur area in elf land
+8755	More elf area
+9025	More of that weird place that is only landscape tiles and no objects
+9276	Client loads to 50% and then stops. (It's Neitiznot, or Jatiszo, can't remember which is which)
+9277	Top of Jatiszo/Neitiznot island
+9518	Appears to be just water.
+9804	Client loads to 50% and then stops.
+9810	Client loads to 50% and then stops.
+10301	Some ice on a bit of snow in the ocean...
+10304	Appears to be just water.
+10813	Appears to be just water.
+10841	More Bounty Hunter
+10842	More Bounty Hunter
+11067	Sled area
+11098	More Bounty Hunter
+11353	More Bounty Hunter
+11576	Part of the trolls thing just above Burthrope
+11834	Bit of the Wilderness
+11865	More Bounty Hunter
+11866	More Bounty Hunter
+12079	Tutorial Island
+12087	Bit of Wilderness just above the Black Knights Castle
+12345	Actual Bounty Hunter
+12374	Not sure. Looks like newer Varrock underground. The torches are "beacons" and are new style. There's a single portal out.
+12378	More Bounty Hunter
+12436	Tutorial Island underground
+13142	Those caves which are individual rooms and the only way to get around it with the portals.
+13371	More Wilderness next to Clan Wars
+13626	Appears to be just water.
+13628	Appears to be just water.
+14232	Client loads to 50% and then stops.
+14893	Appears to be just water.
+15147	Appears to be just water.
+15405	Appears to be just water.
+15414	Appears to be just water.
+6992	More Giant Mole
+8251	Appears to be just water.
+8256	Appears to be just water.
+8534	Clouds from the beanstalk quest
+8765	Appears to be just water.
+9263	Appears to be just water.
+9531	Client loads to 50% and then stops.
