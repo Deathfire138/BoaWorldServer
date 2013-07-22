@@ -1,6 +1,6 @@
 package packet.handlers;
 
-import event.InterfaceEvent;
+import boa.event.InterfaceEvent;
 import model.Player;
 import packet.Packet;
 import packet.PacketHandler;

@@ -8,12 +8,12 @@ import java.nio.ByteBuffer;
 
 import boa.Server;
 import boa.game.communication.clan.ClanSettings;
+import boa.io.ActionSender;
 import boa.log.Logger;
 import boa.log.Logger.Type;
 import boa.util.Utils;
 
 
-import net.ActionSender;
 
 import model.Player;
 import model.World;

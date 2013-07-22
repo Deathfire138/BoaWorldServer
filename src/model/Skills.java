@@ -1,7 +1,7 @@
 package model;
 
+import boa.io.ActionSender;
 import model.UpdateFlags.UpdateFlag;
-import net.ActionSender;
 
 public class Skills {
 

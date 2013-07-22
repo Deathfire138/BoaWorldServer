@@ -1,7 +1,7 @@
 package packet.handlers;
 
-import event.InterfaceEvent;
-import net.ActionSender;
+import boa.event.InterfaceEvent;
+import boa.io.ActionSender;
 import model.Animation;
 import model.Inventory;
 import model.Item;

@@ -1,17 +1,18 @@
 package boa.game.communication.clan;
 
 import boa.central.Connect;
-import boa.game.handlers.StandardHandler;
+import boa.event.InputEvent;
+import boa.event.InterfaceEvent;
 import boa.game.handlers.interfaces.ButtonHandler;
-import net.ActionSender;
+import boa.game.handlers.types.StandardHandler;
+import boa.io.ActionSender;
 import model.Player;
-import event.InputEvent;
 
 public class ClanSettings extends StandardHandler implements ButtonHandler {
 
 	@Override
 	public boolean handleButton(final Player player, int opcode, int interfaceId,	int buttonId, int buttonId2) {
-		
+		ActionSender.sendMessage(player, "Clan. Button = "+buttonId+", opcode = "+opcode+", looking for 230. Maybe INPUT_EVENT failure.");
 		if (interfaceId == 590) {
 			if (buttonId == 31) {
 				switch(opcode) {
@@ -156,7 +157,23 @@ public class ClanSettings extends StandardHandler implements ButtonHandler {
 			}
 			return true;
 		} else if (interfaceId == 589) {
-			
+			if (buttonId == 9) {
+				player.addTemporary("INTERFACE_EVENT", new InterfaceEvent() {
+
+					@Override
+					public void close() {
+						ActionSender.sendCloseInterface(player, 548, 77);
+						player.removeTemporary("INTERFACE_EVENT");
+					}
+
+					@Override
+					public void open() {
+						ActionSender.sendInterface(player, 590);	
+					}
+					
+				});
+				((InterfaceEvent)player.getTemporary("INTERFACE_EVENT")).open();
+			}
 			return true;
 		} else {
 			return false;
@@ -164,7 +181,7 @@ public class ClanSettings extends StandardHandler implements ButtonHandler {
 	}
 
 	public static void updateSettingsInterface(Player player, boolean coinShare, byte enter, byte talk, byte kick, byte loot, String prefix) {
-		//22
+		ActionSender.sendMessage(player, "updating settings interface");
 		ActionSender.sendString(player, 590, 30, prefix);
 		ActionSender.sendString(player, 590, 31, ENTER_AND_TALK_PERMISSIONS_TEXTS[enter]);
 		ActionSender.sendString(player, 590, 32, ENTER_AND_TALK_PERMISSIONS_TEXTS[talk]);

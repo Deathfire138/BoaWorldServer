@@ -1,8 +1,8 @@
 package boa.game.general;
 
-import boa.game.handlers.StandardHandler;
 import boa.game.handlers.interfaces.ButtonHandler;
-import net.ActionSender;
+import boa.game.handlers.types.StandardHandler;
+import boa.io.ActionSender;
 import model.Player;
 
 public class MiscellaneousButtons extends StandardHandler implements ButtonHandler {

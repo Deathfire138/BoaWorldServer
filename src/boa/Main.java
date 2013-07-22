@@ -4,7 +4,7 @@ public class Main {
 
 	/**
 	 * 
-	 * @param args[] [0] = worldId, [1] = members boolean, [2] = location, [3] = activity
+	 * @param args[] [0] = worldId, [1] = members boolean, [2] = location, [3] = activity, [4] = debug boolean
 	 * @throws Exception 
 	 * @throws NumberFormatException 
 	 */

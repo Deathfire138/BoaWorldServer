@@ -1,6 +1,6 @@
 package model;
 
-import net.ActionSender;
+import boa.io.ActionSender;
 
 public final class Equipment {
 	

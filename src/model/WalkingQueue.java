@@ -3,9 +3,9 @@ package model;
 import java.util.Deque;
 import java.util.LinkedList;
 
+import boa.io.ActionSender;
 import boa.util.Utils;
 
-import net.ActionSender;
 
 
 public class WalkingQueue {

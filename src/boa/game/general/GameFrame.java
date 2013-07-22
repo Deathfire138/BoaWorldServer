@@ -1,7 +1,7 @@
 package boa.game.general;
 
-import boa.game.handlers.StandardHandler;
 import boa.game.handlers.interfaces.ButtonHandler;
+import boa.game.handlers.types.StandardHandler;
 import model.Player;
 
 public class GameFrame extends StandardHandler implements ButtonHandler {

@@ -1,6 +1,6 @@
 package packet.handlers;
 
-import boa.game.Content;
+import boa.game.handlers.Handler;
 import boa.game.handlers.interfaces.ButtonHandler;
 import model.Player;
 import packet.Packet;
@@ -17,9 +17,10 @@ public class ButtonPackets extends PacketHandler {
 			if(packet.getSize() >= 6) {
 				buttonId2 = packet.getShort() & 0xFFFF;
 			}
-			Content.button(player, packet.getId(), interfaceId, buttonId, buttonId2);
+			//Content.button(player, packet.getId(), interfaceId, buttonId, buttonId2);
+			Handler.button(player, packet.getId(), interfaceId, buttonId, buttonId2);
 			
-			System.out.println("interfaceId = "+interfaceId+", buttonId = "+buttonId+", buttonId2 = "+buttonId2);
+			System.out.println("interfaceId = "+interfaceId+", buttonId = "+buttonId+", buttonId2 = "+buttonId2+", opcode = "+packet.getId());
 	}
 
 	@Override

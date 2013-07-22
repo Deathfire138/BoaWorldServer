@@ -4,13 +4,13 @@ import java.nio.ByteBuffer;
 import java.util.Iterator;
 import java.util.List;
 
+import boa.io.ActionSender;
+import boa.io.PacketBuilder;
+import boa.io.PacketBuilder.Size;
 import boa.util.Utils;
 
 import model.UpdateFlags.UpdateFlag;
 import model.region.RegionManager;
-import net.ActionSender;
-import net.PacketBuilder;
-import net.PacketBuilder.Size;
 
 
 public final class Rendering {

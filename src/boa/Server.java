@@ -4,7 +4,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 import boa.central.Connect;
-import boa.game.Content;
+import boa.game.handlers.Handler;
+import boa.io.ConnectionManager;
 import boa.update.Cache;
 import boa.update.UpdateServer;
 
@@ -13,7 +14,6 @@ import packet.PacketManager;
 
 
 import model.World;
-import net.ConnectionManager;
 
 
 public class Server {
@@ -42,7 +42,7 @@ public class Server {
 		Cache.init("./data/cache/");
 		UpdateServer.init();
 		PacketManager.init();
-		Content.init();
+		Handler.load();
 		//Handler.load();
 		try {
 			ConnectionManager.init();
