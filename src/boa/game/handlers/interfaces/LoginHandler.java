@@ -4,6 +4,6 @@ import model.Player;
 
 public abstract interface LoginHandler {
 	
-	public abstract boolean handleLogin(Player player);
+	public abstract void handleLogin(Player player);
 
 }

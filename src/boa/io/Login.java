@@ -8,7 +8,7 @@ import model.World;
 import org.jboss.netty.channel.Channel;
 
 import boa.central.Connect;
-import boa.io.codec.RS2Decoder;
+import boa.io.rs2client.protocol.RS2Decoder;
 
 
 public class Login {

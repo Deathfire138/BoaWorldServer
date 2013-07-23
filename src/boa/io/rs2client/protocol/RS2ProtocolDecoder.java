@@ -1,4 +1,4 @@
-package boa.io.codec;
+package boa.io.rs2client.protocol;
 
 import java.util.logging.Logger;
 

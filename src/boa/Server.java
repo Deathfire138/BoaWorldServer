@@ -5,7 +5,7 @@ import java.util.concurrent.Executors;
 
 import boa.central.Connect;
 import boa.game.handlers.Handler;
-import boa.io.ConnectionManager;
+import boa.io.rs2client.ConnectionManager;
 import boa.update.Cache;
 import boa.update.UpdateServer;
 
@@ -32,6 +32,7 @@ public class Server {
 		this.location = location;
 		this.activity = activity;
 		isDebugEnabled = debug;
+		
 		init();
 	}
 	

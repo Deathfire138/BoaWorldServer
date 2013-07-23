@@ -1,12 +1,12 @@
-package boa.io;
+package boa.io.rs2client;
 
 
 import org.jboss.netty.channel.ChannelPipeline;
 import org.jboss.netty.channel.ChannelPipelineFactory;
 import org.jboss.netty.channel.Channels;
 
-import boa.io.codec.RS2Encoder;
-import boa.io.codec.RS2ProtocolDecoder;
+import boa.io.rs2client.protocol.RS2Encoder;
+import boa.io.rs2client.protocol.RS2ProtocolDecoder;
 
 public final class ProtocolPipelineMultiplexer implements ChannelPipelineFactory {
 

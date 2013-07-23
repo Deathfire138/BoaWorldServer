@@ -7,6 +7,11 @@ import boa.util.Utils;
 import model.Item;
 import model.Player;
 
+/**
+ * TODO Rename this to something more relevant? Such as RS2Packets?
+ * @author Tyler
+ *
+ */
 public class ActionSender {
 
 	public static void login(Player player) {

@@ -1,4 +1,4 @@
-package boa.io;
+package boa.crypto;
 
 /**
  * <p>An implementation of an ISAAC cipher. See

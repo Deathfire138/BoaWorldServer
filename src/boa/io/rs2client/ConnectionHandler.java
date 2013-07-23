@@ -1,4 +1,4 @@
-package boa.io;
+package boa.io.rs2client;
 
 import java.util.logging.Logger;
 

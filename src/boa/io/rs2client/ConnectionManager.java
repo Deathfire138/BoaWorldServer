@@ -1,4 +1,4 @@
-package boa.io;
+package boa.io.rs2client;
 
 import java.util.logging.Logger;
 
@@ -8,6 +8,7 @@ import java.util.concurrent.Executors;
 
 import org.jboss.netty.bootstrap.ServerBootstrap;
 import org.jboss.netty.channel.socket.nio.NioServerSocketChannelFactory;
+
 
 public final class ConnectionManager {
 		
