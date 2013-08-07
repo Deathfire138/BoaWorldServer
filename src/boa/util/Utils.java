@@ -257,7 +257,7 @@ public final class Utils {
             int i_4_ = 0;
             String s = "";
             for (; ;) {
-                byte i_7_ = packet.get();
+                byte i_7_ = packet.getByte();
                 if (i_7_ >= 0) {
                     i_4_++;
                 } else {

@@ -47,6 +47,7 @@ public class RS2LoginDecoder extends FrameDecoder {
 					 */
 					//long serverKey = (Long) session.getAttribute("serverKey");
 					long reportedServerKey = buffer.readLong();
+					System.out.println("client key = " + clientKey + ", server key = " + reportedServerKey);
 					//if(reportedServerKey != serverKey) {
 						//logger.info("Server key mismatch (expected : " + serverKey + ", reported : " + reportedServerKey + ")");
 						//session.close(false);

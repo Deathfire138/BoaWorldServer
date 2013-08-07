@@ -6,6 +6,11 @@ import java.util.logging.Logger;
 
 import model.Player;
 
+/**
+ * TODO yeah... redo the fuck out of this. Not a hard task. ^^
+ * @author Tyler
+ *
+ */
 public class PacketManager {
 
 	private static final Logger logger = Logger.getLogger(PacketManager.class.getName());
@@ -26,15 +31,15 @@ public class PacketManager {
 	public static void handle(Player player, Packet packet) {
 		boolean handled = false;
 		for (PacketHandler handler : handlers) {
-			if (handler.handlesOpcode(packet.getId())) {
+			if (handler.handlesOpcode(packet.getOpcode())) {
 				handler.handle(player, packet);
 				handled = true;
 				break;
 			}
 		}
 		if(!handled) {
-			logger.info("Unhandled packet: (id = "+packet.getId()+"), (size = "+packet.getSize()+")");
-			System.out.println("Unhandled packet! "+packet.getId());
+			logger.info("Unhandled packet: (id = "+packet.getOpcode()+"), (size = "+packet.getSize()+")");
+			System.out.println("Unhandled packet! "+packet.getOpcode());
 		}
 	}
 	

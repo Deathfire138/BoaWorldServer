@@ -5,7 +5,8 @@ import java.util.concurrent.Executors;
 
 import boa.central.Connect;
 import boa.game.handlers.Handler;
-import boa.io.rs2client.ConnectionManager;
+import boa.io.central.CentralConnectionManager;
+import boa.io.rs2client.RS2ConnectionManager;
 import boa.update.Cache;
 import boa.update.UpdateServer;
 
@@ -37,16 +38,14 @@ public class Server {
 	}
 	
 	public void init() throws Exception {
-		pool.submit(new Connect());
-		while(!isOnline)
-			break;
-		Cache.init("./data/cache/");
-		UpdateServer.init();
-		PacketManager.init();
-		Handler.load();
-		//Handler.load();
+		//pool.submit(new Connect());
 		try {
-			ConnectionManager.init();
+			CentralConnectionManager.init();
+			Cache.init("./data/cache/");
+			UpdateServer.init();
+			PacketManager.init();
+			Handler.load();
+			RS2ConnectionManager.init();
 		} catch (Throwable e) {
 			e.printStackTrace();
 		}

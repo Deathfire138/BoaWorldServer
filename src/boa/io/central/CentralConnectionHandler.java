@@ -1,4 +1,4 @@
-package boa.io.rs2client;
+package boa.io.central;
 
 import java.util.logging.Logger;
 
@@ -7,13 +7,17 @@ import org.jboss.netty.channel.SimpleChannelHandler;
 import org.jboss.netty.channel.ChannelHandlerContext;
 import org.jboss.netty.channel.ChannelStateEvent;
 
-public final class ConnectionHandler extends SimpleChannelHandler {
+import boa.io.CentralServer;
+
+public final class CentralConnectionHandler extends SimpleChannelHandler {
 	
-	private static final Logger logger = Logger.getLogger(ConnectionHandler.class.getName());
+	private static final Logger logger = Logger.getLogger(CentralConnectionHandler.class.getName());
 
 	@Override
 	public void channelConnected(ChannelHandlerContext ctx, ChannelStateEvent e) {
 		logger.info("Connection connected on: " + e.getChannel().toString());
+		CentralServer.setChannel(e.getChannel());
+		logger.info("Saved channel.");
 	}
 
 	@Override

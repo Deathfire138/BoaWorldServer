@@ -1,4 +1,4 @@
-package boa.io.rs2client.protocol;
+package boa.io.rs2client.codec;
 
 import java.nio.ByteBuffer;
 
